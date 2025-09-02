@@ -1,0 +1,109 @@
+
+.h3 {
+    font-family: Poppins;
+    font-size: 40px;
+    line-height: 36px;
+    color: #282828;
+    padding-top: 2%;
+    padding-bottom: 0.8%;
+}
+
+.comm{
+    font-size: large;
+}
+
+#commenting-box{
+    width: 80%;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+
+}
+
+.comment-box{
+    width: 80%;
+    padding: 20px;
+    margin-bottom: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.comment-box p {
+    font-family: Poppins;
+    font-size: 14px;
+    line-height: 16px;
+    color: #282828;
+}
+
+.button-container{
+    display: flex;
+}
+
+.button-container button:hover{
+    background-color: #707070;
+}
+
+.editbtn{
+    margin-left: 5px;
+}
+
+.col-md-3 p {
+    font-family: Poppins;
+    font-size: 20px;
+    line-height: 16px;
+    color: #282828;
+    margin-left: 50px;
+}
+
+.fill-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-position: 0 -430px; */
+    border-radius: 10px;
+    opacity: .75;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 50%, transparent 90%);
+}
+
+
+.top-img-wrapper {
+    max-width: 100%;
+    width: 100%;
+    height: 16em;
+}
+
+.thumbnail-wrapper {
+    width: 30em;
+    height: 39em ;
+}
+
+
+@media only screen and (max-width: 991px) {
+    .thumbnail-wrapper {
+        width: 21em;
+        height: 45em ;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .thumbnail-wrapper {
+        width: 18em;
+        height: 20em ;
+    }
+
+}
+
+.game-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.details {
+    background-color: rgb(241, 241, 241);
+    border-radius: 4px;
+    padding: 2em;
+}

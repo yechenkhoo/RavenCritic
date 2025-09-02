@@ -1,0 +1,380 @@
+body {
+  /* background-color: rgb(37, 38, 43); */
+  background-color: ghostwhite;
+}
+
+.img-wrap {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.score {
+  border-radius: 4px;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  height: max-content;
+  position: relative;
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+}
+
+.caption {
+  transform: translate(1em, 0);
+  margin: 3%;
+  text-decoration: none;
+}
+
+h1, h2 {
+  color: black;
+  font-size: 21px; 
+}
+
+.section-title {
+  letter-spacing: 3px;
+}
+
+a, p, h5, h4, h3{
+  color: black;
+}
+
+.subtitle {
+  font-size: 16px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.game-name {
+  color: black;
+  text-decoration: none;
+}
+
+.number {
+  color: ghostwhite;
+  text-align: center;
+  margin: 0;
+  padding: .5vh;
+}
+
+.card2 {
+  width: 400px;
+  height: 200px;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+
+.header-slide img{
+  width: 100%;
+  height: 37em;
+  border: none;
+}
+
+.header-slide:hover {
+  cursor: pointer;
+}
+
+
+.prev {
+  transform: scale(3) translate(25%, -13vh);
+  opacity: 0.25;
+}
+.next {
+  transform: scale(3) translate(-10%, -13vh);
+  opacity: 0.25;
+}
+
+.next, .prev {
+  filter: invert(100%);
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.2s ease;
+}
+
+.slider-wrap:hover button {
+  opacity: 1;
+}
+
+.no-pointer, .no-pointer:hover  {
+  cursor: default;
+}
+
+.hidden {
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.hidden-side {
+  opacity: 0;
+  transform: translate(-10%);
+  transition: 1s ease;
+}
+
+.hidden-top {
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: 2s ease;
+}
+
+.show {
+  transform: translate(0);
+  opacity: 1;
+}
+
+.card {
+  border-radius: 15px;
+  border: 5px solid ghostwhite;
+  width: 15em;
+  height: 19em ;
+  object-fit: fill;
+  background: linear-gradient(to bottom, #00ce7a 30%, rgb(233, 233, 240) 30%);
+  margin: 1em;
+}
+
+.card-tbd {
+  border-radius: 15px;
+  border: 5px solid ghostwhite;
+  width: 15em;
+  height: 19em ;
+  object-fit: fill;
+  background: rgb(233, 233, 240);
+}
+
+.card-img {
+  border-radius: 10px !important;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.card:hover img {
+  cursor: pointer;
+}
+
+#return-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50px;
+  transition: .3s ease;
+}
+
+#return-to-top img {
+  filter: invert(100%);
+}
+
+#return-to-top:hover {
+  opacity: .55;
+}
+
+.prev-slide,
+.next-slide {
+  background: none;
+}
+
+footer {
+  background-color: black;
+  height: 12em;
+}
+
+footer p, footer a, footer hr {
+  font-size: 0.8em; /* Adjust the font size to be slightly smaller than the default */
+  font-style: italic; /* Italicize the text */
+  color: ghostwhite;
+  text-decoration: none;
+  margin: 2em;
+}
+
+@media only screen and (max-width: 480px) {
+  .lower-wrap {
+    width: 95%;
+  }
+
+  .card {
+    border-radius: 15px;
+    border: 5px solid ghostwhite;
+    width: 9em;
+    height: 13em ;
+    object-fit: fill;
+    background: linear-gradient(to bottom, #00ce7a 30%, rgb(233, 233, 240) 30%);
+    margin: 1em;
+  }
+  
+  .card-tbd {
+    border-radius: 15px;
+    border: 5px solid ghostwhite;
+    width: 9em;
+    height: 13em ;
+    object-fit: fill;
+    background: rgb(233, 233, 240);
+  }
+  .slider {
+    width: 85%;
+    transform: translate(20px, 0);
+  }
+  .header-slide {
+    height: 50%;
+  }
+  .navbar-toggler-icon, .navbar-toggler {
+    filter: brightness(100);
+  }
+}
+
+.header-slide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease;
+}
+
+.header-slide.slick-initialized {
+  visibility: visible;
+  opacity: 1;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color:black !important; 
+  z-index: 1030;
+}
+
+.slick-prev {
+  left: -25px !important;
+}
+
+.bright {
+  filter: brightness(1.07);
+}
+
+/* Nav bar css */
+.navbar {
+  z-index: 1030; /* A common z-index value for navigation bars */
+  overflow: visible; /* Ensure that the navbar isn't cutting off content */
+  background-color: black;
+  position: sticky;
+  top: 0;
+}
+
+
+.top, .dropdown-menu, .navbar-collapse, .dropdown-item {
+  z-index: 1030;
+}
+.pills {
+  z-index: 100;
+}
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: rgb(125,108,209) !important;
+  text-decoration: none;
+}
+
+.nav-link:active {
+  color: rgb(125,108,209) !important;
+}
+
+.btn-outline-light:hover {
+  background-color: rgb(125,108,209) !important;
+  color: white !important;
+}
+
+#navbar-register:hover, #navbar-login:hover {
+  text-decoration: none;
+}
+
+.dropdown-menu {
+  max-height: 300px;
+  overflow-y: auto; /* Enables vertical scrolling */
+  background-color: rgb(125,108,209) !important;
+}
+
+.dropdown-menu .dropdown-item {
+  color: white;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  color: #000;
+  background-color: rgb(125,108,209) !important;
+  text-decoration: underline;
+}
+
+.btn-outline-success {
+  border-color: rgb(125,108,209);
+  color: rgb(125,108,209);
+}
+
+.btn-outline-success:hover {
+  background-color: rgb(125,108,209) !important;
+  color: white;
+}
+
+/*for live counter*/
+.counter-section i { display:block; margin:0 0 10px}
+.counter-section span.counter { font-size:40px; color:#070707; line-height:60px; display:block; font-family: "Oswald",sans-serif; letter-spacing: 2px}
+.counter-title{ font-size:12px; letter-spacing:2px; text-transform: uppercase}
+.counter-icon {top:25px; position:relative}
+.counter-style2 .counter-title {letter-spacing: 0.55px; float: left;}
+.counter-style2 span.counter {letter-spacing: 0.55px; float: left; margin-right: 10px;}
+.counter-style2 i {float: right; line-height: 26px; margin: 0 10px 0 0}
+.counter-subheadline span {float: right;}  
+.medium-icon {
+    font-size: 40px !important;
+    margin-bottom: 15px !important;
+} 
+.container_aboutus{
+    margin-top:50px;
+}
+/*for live counter*/
+
+#pills-register-tab, #pills-login-tab {
+  color: black;
+  z-index: 1;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.fade-in-out {
+  position: absolute;
+  z-index: 1020; 
+  top: 30%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for exact centering */
+  animation: fadeInOut 5s ease-in-out forwards;
+  color: white;
+  background-color: rgb(27, 185, 27); /* Add a green background */
+  padding: 10px; /* Add some padding around the text */
+  border-radius: 5px; /* Optionally round the corners of the background */
+  text-align: center;
+}
+
+.text-custommmm {
+  color: #050505;
+}
+
